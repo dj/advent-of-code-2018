@@ -1,6 +1,7 @@
 package main
 
 import (
+	"advent/input"
 	"fmt"
 	"bufio"
 	"strings"
@@ -60,7 +61,7 @@ func part2(input string) int {
 }
 
 func main() {
-	input := readInput("input/day_1.txt")
+	input := input.FromFile("input/day_1.txt")
 	fmt.Println("part 1: ", part1(input))
 	fmt.Println("part 2: ", part2(input))
 }
