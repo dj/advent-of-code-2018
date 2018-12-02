@@ -1,8 +1,8 @@
 package main
 
 import (
-	"advent/input"
 	"fmt"
+	"io/ioutil"
 	"bufio"
 	"strings"
 	"strconv"
@@ -61,7 +61,11 @@ func part2(input string) int {
 }
 
 func main() {
-	input := input.FromFile("input/day_1.txt")
+	content, err :=	 ioutil.ReadFile("day_1.txt")
+	if err != nil {
+		panic(err)
+	}
+	input := string(content[:])
 	fmt.Println("part 1: ", part1(input))
 	fmt.Println("part 2: ", part2(input))
 }
